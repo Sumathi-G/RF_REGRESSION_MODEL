@@ -8,7 +8,7 @@ st.set_page_config(page_title="Regression Predictor", layout="centered")
 st.title("🔮 Regression Prediction App")
 
 # Load model
-MODEL_PATH = "/mnt/data/RF_REGRESSION.pkl"
+MODEL_PATH = "RF_REGRESSION.pkl"
 
 @st.cache_resource
 def load_model():
