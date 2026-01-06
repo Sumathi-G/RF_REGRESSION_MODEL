@@ -1,5 +1,4 @@
 import streamlit as st
-import pickle
 import numpy as np
 import os
 
@@ -8,13 +7,12 @@ st.set_page_config(page_title="Regression Predictor", layout="centered")
 st.title("🔮 Regression Prediction App")
 
 # Load model
-MODEL_PATH = "RF_REGRESSION.pkl"
+from joblib import load
+import streamlit as st
 
 @st.cache_resource
 def load_model():
-    with open(MODEL_PATH, "rb") as file:
-        model = pickle.load(file)
-    return model
+    return load("model.joblib")
 
 model = load_model()
 
