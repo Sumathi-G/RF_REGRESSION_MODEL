@@ -8,7 +8,6 @@ st.title("🔮 Regression Prediction App")
 
 # Load model
 from joblib import load
-import streamlit as st
 
 @st.cache_resource
 def load_model():
