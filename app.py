@@ -10,10 +10,10 @@ st.title("🔮 Regression Prediction App")
 # Load model safely
 @st.cache_resource
 def load_model():
-    if not os.path.exists("model.pkl"):
+    if not os.path.exists("RF_REGRESSION.pkl"):
         st.error("❌ model.pkl not found. Please upload it to the GitHub repo.")
         st.stop()
-    with open("model.pkl", "rb") as f:
+    with open("RF_REGRESSION.pkl", "rb") as f:
         return pickle.load(f)
 
 model = load_model()
